@@ -39,7 +39,7 @@ mv.visitVarInsn(ILOAD, 1);
 mv.visitInsn(IADD);
 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(I)V", false);
 mv.visitInsn(RETURN);
-mv.visitMaxs(1, 2);
+mv.visitMaxs(3, 2);
 mv.visitEnd();
 }
 cw.visitEnd();
