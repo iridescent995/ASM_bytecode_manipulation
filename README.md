@@ -2,17 +2,26 @@
 Using ASM (a java lib) to manipulate java classes at run time
 
 
-type safety
 
+How to run ASMifier to transforms a class file into the source code that would generate that class using ASM's APIs.
+
+How to Asmify your class. Its simple:
+
+Compile your class:
 
 ```
 javac main.java
 ```
 
+*There are 2 ways, either to output code in cmd or in a file:
+
+1. Use ASMifier from the jar to load the source code: (Command for windows, for linux use ':' in place of ';')
 
 ```
 java -cp .;asm-all-5.0.3.jar org.objectweb.asm.util.ASMifier main
 ```
+
+Voilà you have the code:
 
 ```
 import java.util.*;
@@ -67,6 +76,8 @@ return cw.toByteArray();
 ```
 
 or
+
+2. Save the code in a file mainDump.Java:
 
 ```
 java -cp .;asm-all-5.0.3.jar org.objectweb.asm.util.ASMifier main>mainDump.java
